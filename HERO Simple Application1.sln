@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HERO Simple Application1", "HERO Simple Application1\HERO Simple Application1.csproj", "{E5560EC1-2099-4DCA-A902-C977D50BFEC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D2388E3-AEE2-4203-9434-814FFEDD535E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5560EC1-2099-4DCA-A902-C977D50BFEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5560EC1-2099-4DCA-A902-C977D50BFEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5560EC1-2099-4DCA-A902-C977D50BFEC7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E5560EC1-2099-4DCA-A902-C977D50BFEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5560EC1-2099-4DCA-A902-C977D50BFEC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5560EC1-2099-4DCA-A902-C977D50BFEC7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {641A173B-59E4-41FB-9E2B-F9CD10B3D89D}
+	EndGlobalSection
+EndGlobal
