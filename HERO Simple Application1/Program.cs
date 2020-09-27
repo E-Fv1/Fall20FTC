@@ -9,6 +9,10 @@ namespace HERO_Simple_Application1
     {
         public static void Main()
         {
+            //robotInit();
+
+            Intake intake = new Intake();
+
             /* simple counter to print and watch using the debugger */
             int counter = 0;
             /* loop forever */
@@ -26,5 +30,12 @@ namespace HERO_Simple_Application1
                 //TeleopStateMachine.moveRight();
             }
         }
+
+        //private static Array robotInit()
+        //{
+
+            
+        //    return [intake];
+        //}
     }
 }
