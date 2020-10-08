@@ -1,18 +1,12 @@
-﻿using System;
-using System.Threading;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-
-namespace HERO_Simple_Application1
+﻿namespace HERO_Simple_Application1
 {
-
     public enum IntakeStates
     {
         STOP_STATE,
-        IN_STATE, 
+        IN_STATE,
         OUT_STATE
-        
     }
+
     public class Intake
     {
         private int intakeTalon1ID = 0;
@@ -33,12 +27,15 @@ namespace HERO_Simple_Application1
                 case (int)IntakeStates.STOP_STATE:
                     Stop();
                     break;
+
                 case (int)IntakeStates.IN_STATE:
                     In();
                     break;
+
                 case (int)IntakeStates.OUT_STATE:
                     Out();
                     break;
+
                 default:
                     break;
             }
@@ -46,18 +43,14 @@ namespace HERO_Simple_Application1
 
         private void Stop()
         {
-        
         }
 
         private void In()
         {
-        
         }
 
         private void Out()
         {
-
         }
-
     }
 }

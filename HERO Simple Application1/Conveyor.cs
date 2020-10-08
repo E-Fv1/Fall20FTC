@@ -1,11 +1,5 @@
-﻿using System;
-using System.Threading;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-
-namespace HERO_Simple_Application1
+﻿namespace HERO_Simple_Application1
 {
-
     public enum ConveyorStates
     {
         STOP_STATE,
@@ -15,11 +9,10 @@ namespace HERO_Simple_Application1
 
     public class Conveyor
     {
-
         private int conveyorTalonID = 0;
 
-        private int conveyorState = (int) ConveyorStates.STOP_STATE;
-        
+        private int conveyorState = (int)ConveyorStates.STOP_STATE;
+
         public Conveyor()
         {
             CTRE.Phoenix.MotorControl.CAN.TalonSRX conveyorTalon = new CTRE.Phoenix.MotorControl.CAN.TalonSRX(conveyorTalonID);
@@ -29,12 +22,15 @@ namespace HERO_Simple_Application1
         {
             switch (conveyorState)
             {
-                case (int) ConveyorStates.STOP_STATE:
+                case (int)ConveyorStates.STOP_STATE:
                     break;
-                case (int) ConveyorStates.IN_STATE:
+
+                case (int)ConveyorStates.IN_STATE:
                     break;
-                case (int) ConveyorStates.OUT_STATE:
+
+                case (int)ConveyorStates.OUT_STATE:
                     break;
+
                 default:
                     break;
             }
@@ -42,17 +38,14 @@ namespace HERO_Simple_Application1
 
         private void Stop()
         {
-
         }
 
         private void In()
         {
-
         }
 
         private void Out()
         {
-
         }
     }
 }
