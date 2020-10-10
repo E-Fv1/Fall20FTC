@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Climber.cs" />
     <Compile Include="Conveyor.cs" />
+    <Compile Include="Drive.cs" />
     <Compile Include="Intake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
