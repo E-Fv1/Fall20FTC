@@ -1,6 +1,4 @@
-﻿using CTRE.Phoenix.MotorControl;
-using Microsoft.SPOT;
-using System.Windows.Forms;
+﻿using Microsoft.SPOT;
 
 namespace HERO_Simple_Application1
 {
@@ -8,8 +6,6 @@ namespace HERO_Simple_Application1
     {
         private int driveTalon1ID = 0;
         private int driveTalon2ID = 0;
-
-        
 
         public static void Main()
         {
@@ -20,7 +16,7 @@ namespace HERO_Simple_Application1
             CTRE.Phoenix.MotorControl.CAN.TalonSRX driveTalon1 = new CTRE.Phoenix.MotorControl.CAN.TalonSRX(0);
             CTRE.Phoenix.MotorControl.CAN.TalonSRX driveTalon2 = new CTRE.Phoenix.MotorControl.CAN.TalonSRX(0);
 
-            CTRE.Phoenix.Controller.GameController gamepad = 
+            CTRE.Phoenix.Controller.GameController gamepad =
                 new CTRE.Phoenix.Controller.GameController(new CTRE.Phoenix.UsbHostDevice(0));
             CTRE.Phoenix.Controller.GameControllerValues gv = new CTRE.Phoenix.Controller.GameControllerValues();
 
@@ -30,8 +26,10 @@ namespace HERO_Simple_Application1
             Conveyor conveyor = new Conveyor();
             Climber climber = new Climber();
 
+            Drive drive = new Drive(driveTalon1, driveTalon2, gamepad);
+
             TeleopStateMachine tsm = new TeleopStateMachine(intake, conveyor, climber, gamepad);
-            
+
             /* Start Auton */
 
             /* Start Teleop */
@@ -57,9 +55,9 @@ namespace HERO_Simple_Application1
         public double Abs(double inputValue)
         {
             double result = inputValue;
-            if(inputValue < 0)
+            if (inputValue < 0)
             {
-                result *= -1;   
+                result *= -1;
             }
             return result;
         }

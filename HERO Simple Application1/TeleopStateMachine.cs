@@ -36,12 +36,11 @@ namespace HERO_Simple_Application1
             gamepad = gamepad_;
         }
 
-
         public void getInputs()
         {
             for (int i = 0; i < 12; i++)
             {
-                if (gamepad.GetButton((uint) i))
+                if (gamepad.GetButton((uint)i))
                 {
                     currentButtonInput = i;
                 }
