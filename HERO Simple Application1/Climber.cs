@@ -24,12 +24,10 @@ namespace HERO_Simple_Application1
 
         public Climber(TalonSRX armTalon_, TalonSRX winchTalon_)
         {
-
             armTalon = armTalon_;
             winchTalon = winchTalon_;
 
             startTime = DateTime.UtcNow;
-
         }
 
         public void stateMachine()
@@ -65,7 +63,6 @@ namespace HERO_Simple_Application1
         {
             armTalon.Set(CTRE.Phoenix.MotorControl.ControlMode.PercentOutput, 0);
             winchTalon.Set(CTRE.Phoenix.MotorControl.ControlMode.PercentOutput, 0);
-
         }
 
         public void LiftArm()
@@ -97,8 +94,9 @@ namespace HERO_Simple_Application1
         private void MoveForSeconds(int s, double p, TalonSRX talon)
         {
             DateTime sTime = DateTime.UtcNow;
-            while (DateTime.UtcNow - startTime < TimeSpan.FromTicks(TimeSpan.TicksPerSecond * s)) { 
-            talon.Set(CTRE.Phoenix.MotorControl.ControlMode.PercentOutput, p);
+            while (DateTime.UtcNow - startTime < TimeSpan.FromTicks(TimeSpan.TicksPerSecond * s))
+            {
+                talon.Set(CTRE.Phoenix.MotorControl.ControlMode.PercentOutput, p);
             }
         }
     }
