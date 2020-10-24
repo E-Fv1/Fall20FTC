@@ -70,30 +70,36 @@ namespace HERO_Simple_Application1
 
         public void LiftArm()
         {
-            startTime = DateTime.UtcNow;
-            while(DateTime.UtcNow - startTime < TimeSpan.FromTicks(TimeSpan.TicksPerSecond * 10)){} //tbh i should just make a wait function to do this for me
-            armTalon.Set(CTRE.Phoenix.MotorControl.ControlMode.PercentOutput, 1);
+            MoveForSeconds(5, 1, armTalon);
         }
 
         public void LowerArm()
         {
-
+            MoveForSeconds(5, -1, armTalon);
         }
 
         public void RaiseHanger()
         {
-
+            MoveForSeconds(5, 1, winchTalon);
         }
 
         public void LowerHanger()
         {
-
+            MoveForSeconds(5, -1, winchTalon);
         }
 
         private void WaitForSeconds(int s)
         {
             DateTime sTime = DateTime.UtcNow;
             while (DateTime.UtcNow - startTime < TimeSpan.FromTicks(TimeSpan.TicksPerSecond * s)) { }
+        }
+
+        private void MoveForSeconds(int s, double p, TalonSRX talon)
+        {
+            DateTime sTime = DateTime.UtcNow;
+            while (DateTime.UtcNow - startTime < TimeSpan.FromTicks(TimeSpan.TicksPerSecond * s)) { 
+            talon.Set(CTRE.Phoenix.MotorControl.ControlMode.PercentOutput, p);
+            }
         }
     }
 }
